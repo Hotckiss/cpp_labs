@@ -192,13 +192,13 @@ int main(int argc, char* argv[]) {
     test_map tests;
     init_test_map(tests);
 
-    //if (argc < 2 ||
-    //    tests.find(argv[1]) == tests.end()) {
+    if (argc < 2 ||
+        tests.find(argv[1]) == tests.end()) {
         run_all(tests);
-  //  }
-  //  else {
-  //      tests[argv[1]]();
-  //  }
+    }
+    else {
+        tests[argv[1]]();
+    }
 
     std::cout << "OK" << std::endl;
 
