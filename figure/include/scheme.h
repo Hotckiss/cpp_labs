@@ -8,16 +8,15 @@ public:
     ~Scheme();
 
     void push_back_figure(Figure* fg);
-    void remove_figure(int id); // элементы смещаются влево
+    void remove_figure(int id);
 
     void print_all_figures();
     void zoom_figure(int id, int factor);
-    Figure* is_inside_figure(int x, int y); // если внутри нескольких фигур, то возвращается любая из них
+    Figure* is_inside_figure(int x, int y);
     void move(int id, int new_x, int new_y);
 
 private:
-    //...
     int size;
     int cap;
-    Figure** figures_; // размер массива задается в конструкторе и больше не растет
+    Figure** figures_;
 };
