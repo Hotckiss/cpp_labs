@@ -13,9 +13,7 @@ void Circle::print() const {
     printf("Circle %i: x = %i y = %i radius = %i label = %s\n", id, x, y, r, l);
 }
 bool Circle::is_inside(int x, int y) const {
-    if( (x - this->x) * (x - this->x) + (y - this->y) * (y - this->y) <= r * r)
-        return true;
-    return false;
+    return ((x - this->x) * (x - this->x) + (y - this->y) * (y - this->y) <= r * r);
 }
 void Circle::zoom(int factor) {
     r *= factor;
